@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4332EA971D368BED0008DFFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4332EA961D368BED0008DFFD /* AppDelegate.swift */; };
-		4332EA991D368BED0008DFFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4332EA981D368BED0008DFFD /* ViewController.swift */; };
+		4332EA991D368BED0008DFFD /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4332EA981D368BED0008DFFD /* CameraViewController.swift */; };
 		4332EA9C1D368BED0008DFFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4332EA9A1D368BED0008DFFD /* Main.storyboard */; };
 		4332EA9E1D368BED0008DFFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4332EA9D1D368BED0008DFFD /* Assets.xcassets */; };
 		4332EAA11D368BED0008DFFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4332EA9F1D368BED0008DFFD /* LaunchScreen.storyboard */; };
+		4332EAA91D368BFC0008DFFD /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4332EAA81D368BFC0008DFFD /* Camera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4332EA931D368BED0008DFFD /* Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4332EA961D368BED0008DFFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4332EA981D368BED0008DFFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4332EA981D368BED0008DFFD /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		4332EA9B1D368BED0008DFFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4332EA9D1D368BED0008DFFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4332EAA01D368BED0008DFFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4332EAA21D368BED0008DFFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4332EAA81D368BFC0008DFFD /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				4332EA961D368BED0008DFFD /* AppDelegate.swift */,
-				4332EA981D368BED0008DFFD /* ViewController.swift */,
+				4332EA981D368BED0008DFFD /* CameraViewController.swift */,
+				4332EAA81D368BFC0008DFFD /* Camera.swift */,
 				4332EA9A1D368BED0008DFFD /* Main.storyboard */,
 				4332EA9D1D368BED0008DFFD /* Assets.xcassets */,
 				4332EA9F1D368BED0008DFFD /* LaunchScreen.storyboard */,
@@ -96,6 +99,7 @@
 				TargetAttributes = {
 					4332EA921D368BED0008DFFD = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 28MK7H5SR4;
 					};
 				};
 			};
@@ -135,8 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4332EA991D368BED0008DFFD /* ViewController.swift in Sources */,
+				4332EA991D368BED0008DFFD /* CameraViewController.swift in Sources */,
 				4332EA971D368BED0008DFFD /* AppDelegate.swift in Sources */,
+				4332EAA91D368BFC0008DFFD /* Camera.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,10 +256,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Camera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = orgID.Camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -262,10 +270,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Camera/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = orgID.Camera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

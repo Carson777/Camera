@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPE-XX-i8a">
+                                <rect key="frame" x="3" y="0.0" width="597" height="527"/>
+                                <state key="normal" title="Click to Add Image">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openCameraButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="jdT-o1-TVS"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yNG-dA-yqC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="527"/>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZc-6S-AvQ">
+                                <rect key="frame" x="283" y="550" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oVs-Zv-h2O"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IZc-6S-AvQ" firstAttribute="centerX" secondItem="yNG-dA-yqC" secondAttribute="centerX" id="0xH-4e-qyJ"/>
+                            <constraint firstAttribute="bottom" secondItem="IZc-6S-AvQ" secondAttribute="bottom" constant="20" symbolic="YES" id="Dse-dy-WWB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qPE-XX-i8a" secondAttribute="trailing" constant="-20" id="Ldy-Ct-bq4"/>
+                            <constraint firstItem="yNG-dA-yqC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q1L-fa-UCg"/>
+                            <constraint firstItem="yNG-dA-yqC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="Zcc-Bx-UaV"/>
+                            <constraint firstItem="qPE-XX-i8a" firstAttribute="leading" secondItem="yNG-dA-yqC" secondAttribute="leading" constant="3" id="aP0-Ft-axa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yNG-dA-yqC" secondAttribute="bottom" constant="73" id="gwe-pq-FxV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qPE-XX-i8a" secondAttribute="bottom" constant="73" id="iaq-6W-gDX"/>
+                            <constraint firstItem="yNG-dA-yqC" firstAttribute="top" secondItem="qPE-XX-i8a" secondAttribute="top" id="nX5-9P-eHH"/>
+                            <constraint firstItem="qPE-XX-i8a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-17" id="x04-eH-k0Z"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="yNG-dA-yqC" id="Tam-e8-46Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="290"/>
         </scene>
     </scenes>
 </document>
